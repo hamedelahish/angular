@@ -13,6 +13,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
 import { ProductListComponent } from './product-list/product-list.component';
 import {HttpClientModule} from "@angular/common/http";
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
 
@@ -32,7 +33,8 @@ import {HttpClientModule} from "@angular/common/http";
     LoginComponent,
     DashboardComponent,
     DashboardLayoutComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductDetailComponent
   ],
 
   providers: [],

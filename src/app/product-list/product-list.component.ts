@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ProductsService} from "../shared/services/products/products.service";
 import {IProducts} from "../shared/interfaces/products.interface";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-product-list',
@@ -10,7 +11,7 @@ import {IProducts} from "../shared/interfaces/products.interface";
 export class ProductListComponent implements OnInit {
   products: IProducts[] = [];
 
-  constructor(private productsService: ProductsService) {
+  constructor(private productsService: ProductsService,private router:Router) {
   }
 
   ngOnInit(): void {
@@ -21,4 +22,7 @@ export class ProductListComponent implements OnInit {
     })
   }
 
+  showDetail(productId:number){
+  this.router.navigate(['/dashboard/product',productId])
+  }
 }
