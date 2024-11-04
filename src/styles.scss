@@ -1,51 +1,51 @@
-
-@font-face {
-  font-family: IRANSans;
-  font-style: normal;
-  font-weight: 100;
-  src: url('/assets/fonts/woff/IRANSansWeb(FaNum).woff') format('woff'),
-  url('/assets/fonts/woff2/IRANSansWeb(FaNum).woff2') format('woff2');
-}
-
-@font-face {
-  font-family: IRANSans;
-  font-style: normal;
-  font-weight: 200;
-  src: url('/assets/fonts/woff/IRANSansWeb(FaNum)_UltraLight.woff') format('woff'),
-  url('/assets/fonts/woff2/IRANSansWeb(FaNum)_UltraLight.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: IRANSans;
-  font-style: normal;
-  font-weight: 300;
-  src: url('/assets/fonts/woff/IRANSansWeb(FaNum)_Light.woff') format('woff'),
-  url('/assets/fonts/woff2/IRANSansWeb(FaNum)_Light.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: IRANSans;
-  font-style: normal;
-  font-weight: 500;
-  src: url('/assets/fonts/woff/IRANSansWeb(FaNum)_Medium.woff') format('woff'),
-  url('/assets/fonts/woff2/IRANSansWeb(FaNum)_Medium.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: IRANSans;
-  font-style: normal;
-  font-weight: 900;
-  src: url('/assets/fonts/woff/IRANSansWeb(FaNum)_Black.woff') format('woff'),
-  url('/assets/fonts/woff2/IRANSansWeb(FaNum)_Black.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: IRANSans;
-  font-style: normal;
-  font-weight: bold;
-  src: url('/assets/fonts/woff/IRANSansWeb(FaNum)_Bold.woff') format('woff'),
-  url('/assets/fonts/woff2/IRANSansWeb(FaNum)_Bold.woff2') format('woff2');
-}
+//
+//@font-face {
+//  font-family: IRANSans;
+//  font-style: normal;
+//  font-weight: 100;
+//  src: url('/assets/fonts/woff/IRANSansWeb(FaNum).woff') format('woff'),
+//  url('/assets/fonts/woff2/IRANSansWeb(FaNum).woff2') format('woff2');
+//}
+//
+//@font-face {
+//  font-family: IRANSans;
+//  font-style: normal;
+//  font-weight: 200;
+//  src: url('/assets/fonts/woff/IRANSansWeb(FaNum)_UltraLight.woff') format('woff'),
+//  url('/assets/fonts/woff2/IRANSansWeb(FaNum)_UltraLight.woff2') format('woff2');
+//}
+//
+//@font-face {
+//  font-family: IRANSans;
+//  font-style: normal;
+//  font-weight: 300;
+//  src: url('/assets/fonts/woff/IRANSansWeb(FaNum)_Light.woff') format('woff'),
+//  url('/assets/fonts/woff2/IRANSansWeb(FaNum)_Light.woff2') format('woff2');
+//}
+//
+//@font-face {
+//  font-family: IRANSans;
+//  font-style: normal;
+//  font-weight: 500;
+//  src: url('/assets/fonts/woff/IRANSansWeb(FaNum)_Medium.woff') format('woff'),
+//  url('/assets/fonts/woff2/IRANSansWeb(FaNum)_Medium.woff2') format('woff2');
+//}
+//
+//@font-face {
+//  font-family: IRANSans;
+//  font-style: normal;
+//  font-weight: 900;
+//  src: url('/assets/fonts/woff/IRANSansWeb(FaNum)_Black.woff') format('woff'),
+//  url('/assets/fonts/woff2/IRANSansWeb(FaNum)_Black.woff2') format('woff2');
+//}
+//
+//@font-face {
+//  font-family: IRANSans;
+//  font-style: normal;
+//  font-weight: bold;
+//  src: url('/assets/fonts/woff/IRANSansWeb(FaNum)_Bold.woff') format('woff'),
+//  url('/assets/fonts/woff2/IRANSansWeb(FaNum)_Bold.woff2') format('woff2');
+//}
 
 
 
@@ -55,7 +55,7 @@ html, body {
 
 body {
   margin: 0;
-  font-family: 'IRANSans', serif !important;
+  font-family: Roboto, serif !important;
 }
 .mat-body-1, .mat-card-title, .mat-button {
   font-family: 'IRANSans', serif !important;
