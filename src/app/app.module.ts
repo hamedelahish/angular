@@ -9,6 +9,8 @@ import {MaterialModule} from "./material.module";
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardLayoutComponent } from './dashboard-layout/dashboard-layout.component';
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
 
@@ -17,7 +19,9 @@ import { DashboardLayoutComponent } from './dashboard-layout/dashboard-layout.co
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    MatToolbarModule,
+    MatIconModule
   ],
 
   declarations: [

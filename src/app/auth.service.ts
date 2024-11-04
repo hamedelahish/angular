@@ -11,11 +11,14 @@ export class AuthService {
   private isLoggedIn = new BehaviorSubject<boolean>(false);
   isLoggedIn$ = this.isLoggedIn.asObservable();
 
-  constructor(private router:Router) { }
+  constructor(private router:Router) {
+    this.checkLogin()
+  }
 
   login(userInfo:UserInfo) {
     if (userInfo.username === userMock.username && userInfo.password === userMock.password) {
       localStorage.setItem('token', userMock.token)
+      this.isLoggedIn.next(true);
       this.router.navigate(['/dashboard'])
     }
     }
