@@ -3,7 +3,11 @@
   <span class="logo">
     <img src="assets/logo.png" alt="logo"/>
   </span>
+  <button mat-icon-button color="primary" matBadge="{{ cartCount$ | async }}" matBadgeColor="warn">
+    <mat-icon>shopping_cart</mat-icon>
+  </button>
   <span class="spacer"></span>
+
 
   <button
     *ngIf="isLoggedIn$ | async"
@@ -13,6 +17,7 @@
     color="primary"
   >
     <mat-icon>person</mat-icon>
+
   </button>
 
 

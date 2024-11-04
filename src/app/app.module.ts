@@ -14,6 +14,11 @@ import {MatIconModule} from "@angular/material/icon";
 import { ProductListComponent } from './product-list/product-list.component';
 import {HttpClientModule} from "@angular/common/http";
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import {MatDividerModule} from "@angular/material/divider";
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import {cartReducer} from "./store/cart/cart.reducer";
+import {MatBadgeModule} from "@angular/material/badge";
 
 @NgModule({
 
@@ -25,7 +30,11 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     FormsModule,
     MatToolbarModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDividerModule,
+    StoreModule.forRoot({cart: cartReducer}),
+    EffectsModule.forRoot([]),
+    MatBadgeModule
   ],
 
   declarations: [

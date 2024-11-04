@@ -1,7 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {ProductsService} from "../shared/services/products/products.service";
-import {initializeProductDetail, IProductDetail, IProducts} from "../shared/interfaces/products.interface";
+import {initializeProductDetail, IProductDetail} from "../shared/interfaces/products.interface";
+import { addToCart } from '../store/cart/cart.action';
+import {Store} from "@ngrx/store";
 
 @Component({
   selector: 'app-product-detail',
@@ -10,10 +12,13 @@ import {initializeProductDetail, IProductDetail, IProducts} from "../shared/inte
 })
 export class ProductDetailComponent implements OnInit {
   productDetail: IProductDetail = initializeProductDetail();
+  quantity: number = 1
 
   constructor(
     private route: ActivatedRoute,
-    private productService: ProductsService
+    private productService: ProductsService,
+    private store:Store
+
   ) {
   }
 
@@ -31,5 +36,20 @@ export class ProductDetailComponent implements OnInit {
         }
       })
     });
+
+  }
+  increaseQuantity() {
+    this.quantity++;
+  }
+
+  decreaseQuantity() {
+    if (this.quantity > 1) {
+      this.quantity--;
+    }
+  }
+
+  addToCart(product: IProductDetail) {
+    console.log('quantity',this.quantity)
+    this.store.dispatch(addToCart({ product, quantity: this.quantity }));
   }
 }

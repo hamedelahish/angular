@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from "../shared/services/auth/auth.service";
-import {shareReplay} from "rxjs";
+import {Observable, shareReplay} from "rxjs";
+import {selectCartCount} from "../store/cart/cart.selectors";
+import {Store} from "@ngrx/store";
 
 @Component({
   selector: 'app-dashboard-layout',
@@ -9,9 +11,12 @@ import {shareReplay} from "rxjs";
 })
 export class DashboardLayoutComponent implements OnInit {
   isLoggedIn$=this.authService.isLoggedIn$.pipe(shareReplay(1))
-  constructor(private authService:AuthService ) { }
+  cartCount$: Observable<number> | undefined;
+
+  constructor(private authService:AuthService,private store:Store ) { }
 
   ngOnInit(): void {
+    this.cartCount$=this.store.select(selectCartCount)
   }
   logout(){
     this.authService.logout()

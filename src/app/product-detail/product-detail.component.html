@@ -1,1 +1,26 @@
-<p>product-detail works!</p>
+<div *ngIf="productDetail">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{ productDetail.title }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="productDetail.thumbnail" alt="{{ productDetail.title }}">
+    <mat-card-content>
+      <p>{{ productDetail.description }}</p>
+      <p>Price: ${{ productDetail.price }}</p>
+      <p>Rating: {{ productDetail.rating }}</p>
+      <mat-divider></mat-divider>
+      <p>Category: {{ productDetail.category }}</p>
+      <p>Brand: {{ productDetail.brand }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-icon-button (click)="decreaseQuantity()">
+        <mat-icon>remove</mat-icon>
+      </button>
+      <span>{{ quantity }}</span>
+      <button mat-icon-button (click)="increaseQuantity()">
+        <mat-icon>add</mat-icon>
+      </button>
+      <button mat-raised-button color="primary" (click)="addToCart(productDetail)">Add to Cart</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
