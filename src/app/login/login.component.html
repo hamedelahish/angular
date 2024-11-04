@@ -1,14 +1,14 @@
 <div class="login-container">
   <mat-card>
     <mat-card-header>
-      <mat-card-title> سامانه</mat-card-title>
+      <mat-card-title> Product Shop</mat-card-title>
     </mat-card-header>
     <form (submit)="login(userInfo)">
       <mat-card-content>
         <mat-form-field class="full-width">
           <input
             matInput
-            placeholder="نام کاربری"
+            placeholder="UserName"
             type="text"
             name="username"
             [(ngModel)]="userInfo.username"
@@ -18,7 +18,7 @@
         <mat-form-field class="full-width">
           <input
             matInput
-            placeholder="رمز عبور"
+            placeholder="Password"
             type="password"
             name="password"
             [(ngModel)]="userInfo.password"
@@ -28,7 +28,7 @@
       </mat-card-content>
       <mat-card-actions>
         <button type="submit" mat-button color="primary">
-          ورود
+          Login
         </button>
       </mat-card-actions>
 
