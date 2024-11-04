@@ -1,7 +1,7 @@
 <div class="product-list">
   <mat-grid-list cols="4" rowHeight="20rem" gutterSize="10px">
     <mat-grid-tile  *ngFor="let product of products">
-      <mat-card (click)="showDetail(product.id)">
+      <mat-card style="cursor: pointer" (click)="showDetail(product.id)">
         <img mat-card-image [src]="product.thumbnail" alt="Photo of a Shiba Inu">
         <mat-card-footer>
           <mat-card-title style="margin-bottom: 15px;font-size: 1rem">{{ product.title }}</mat-card-title>
