@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {BehaviorSubject,observable} from "rxjs";
-import {userMock} from "./shared/content/content.mock";
-import {UserInfo} from "./shared/interfaces/auth.interface";
+import {userMock} from "../../content/content.mock";
+import {UserInfo} from "../../interfaces/auth.interface";
 import {Router} from "@angular/router";
 
 @Injectable({
