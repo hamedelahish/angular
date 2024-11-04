@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {UserInfo} from "../shared/interfaces/auth.interface";
+import {IUserInfo} from "../shared/interfaces/auth.interface";
 import {userMock} from "../shared/content/content.mock";
 import {AuthService} from "../shared/services/auth/auth.service";
 
@@ -9,7 +9,7 @@ import {AuthService} from "../shared/services/auth/auth.service";
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  userInfo: UserInfo = {
+  userInfo: IUserInfo = {
     username: '',
     password: ''
   }
@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
     this.authService.checkLogin()
   }
 
-  login(userInfo: UserInfo) {
+  login(userInfo: IUserInfo) {
     this.authService.login(userInfo)
   }
 }

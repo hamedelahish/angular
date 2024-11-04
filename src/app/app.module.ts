@@ -11,6 +11,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardLayoutComponent } from './dashboard-layout/dashboard-layout.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
+import { ProductListComponent } from './product-list/product-list.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
 
@@ -21,14 +23,16 @@ import {MatIconModule} from "@angular/material/icon";
     MaterialModule,
     FormsModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
 
   declarations: [
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    DashboardLayoutComponent
+    DashboardLayoutComponent,
+    ProductListComponent
   ],
 
   providers: [],

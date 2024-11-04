@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {BehaviorSubject,observable} from "rxjs";
 import {userMock} from "../../content/content.mock";
-import {UserInfo} from "../../interfaces/auth.interface";
+import {IUserInfo} from "../../interfaces/auth.interface";
 import {Router} from "@angular/router";
 
 @Injectable({
@@ -15,7 +15,7 @@ export class AuthService {
     this.checkLogin()
   }
 
-  login(userInfo:UserInfo) {
+  login(userInfo:IUserInfo) {
     if (userInfo.username === userMock.username && userInfo.password === userMock.password) {
       localStorage.setItem('token', userMock.token)
       this.isLoggedIn.next(true);
