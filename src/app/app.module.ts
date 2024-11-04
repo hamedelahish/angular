@@ -19,6 +19,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import {cartReducer} from "./store/cart/cart.reducer";
 import {MatBadgeModule} from "@angular/material/badge";
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
 
@@ -43,7 +44,8 @@ import {MatBadgeModule} from "@angular/material/badge";
     DashboardComponent,
     DashboardLayoutComponent,
     ProductListComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    CartComponent
   ],
 
   providers: [],

@@ -5,6 +5,7 @@ import {DashboardComponent} from "./dashboard/dashboard.component";
 import {DashboardLayoutComponent} from "./dashboard-layout/dashboard-layout.component";
 import {AuthGuard} from "./auth.guard";
 import {ProductDetailComponent} from "./product-detail/product-detail.component";
+import {CartComponent} from "./cart/cart.component";
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent, canActivate: [AuthGuard]},
@@ -13,7 +14,8 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     children: [
       {path: '', component: DashboardComponent},
-      {path: 'product/:id', component: ProductDetailComponent}
+      {path: 'product/:id', component: ProductDetailComponent},
+      {path: 'cart', component: CartComponent}
     ]
   },
   {path: 'dashboard', component: DashboardComponent},

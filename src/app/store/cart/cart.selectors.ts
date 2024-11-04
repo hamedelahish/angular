@@ -7,3 +7,7 @@ export const selectCartCount = createSelector(
   selectCartState,
   (state: CartState) => state.products.length
 );
+export const selectCartProducts = createSelector(
+  selectCartState,
+  (state: CartState) => state.products
+);

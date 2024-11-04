@@ -1,9 +1,9 @@
 <mat-toolbar>
 
-  <span class="logo">
+  <span class="logo" style="cursor: pointer" [routerLink]="['/dashboard']">
     <img src="assets/logo.png" alt="logo"/>
   </span>
-  <button mat-icon-button color="primary" matBadge="{{ cartCount$ | async }}" matBadgeColor="warn">
+  <button mat-icon-button color="primary" [routerLink]="['/dashboard/cart']" matBadge="{{ cartCount$ | async }}" matBadgeColor="warn">
     <mat-icon>shopping_cart</mat-icon>
   </button>
   <span class="spacer"></span>
