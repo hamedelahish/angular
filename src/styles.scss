@@ -88,7 +88,15 @@ body {
 
 mat-card {
   width: 100%;
+  img {
+    vertical-align: middle;
+    aspect-ratio: 5/4;
+    height: auto;
+    object-fit: contain;
+    width: auto;
+  }
 }
+
 
 mat-card-actions {
   justify-content: center;
