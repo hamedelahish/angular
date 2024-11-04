@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {environment} from "../../../../environments/environment";
 import {HttpClient} from "@angular/common/http";
-import {IProducts} from "../../interfaces/products.interface";
+import {IProductDetail, IProducts} from "../../interfaces/products.interface";
 
 const BASE_URL = environment.baseUrl
 
@@ -10,7 +10,9 @@ const BASE_URL = environment.baseUrl
 })
 export class ProductsService {
 
-  model = 'products?limit=10'
+
+  model = 'products'
+
 
   constructor(private http: HttpClient) {
   }
@@ -19,8 +21,17 @@ export class ProductsService {
     return this.http.get<{products: IProducts[]}>(this.getUrl())
   }
 
+  getDetailProduct(id:number) {
+    return this.http.get< IProductDetail>(this.getUrlWithId(id))
+  }
+
+
   getUrl() {
-    return `${BASE_URL}/${this.model}`
+    //TODO: موقت جهت عدم دریافت کل اطلاعات ، پجینیشن اضافه خواهد شد
+    return `${BASE_URL}/${this.model}?limit=10`
+  }
+  getUrlWithId(id:number) {
+    return `${BASE_URL}/${this.model}/${id}`
   }
 }
 
