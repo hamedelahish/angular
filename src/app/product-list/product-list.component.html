@@ -1,11 +1,11 @@
 <div class="product-list">
-  <mat-grid-list cols="4" rowHeight="20rem" gutterSize="10px">
+  <mat-grid-list cols="4" rowHeight="15rem"  gutterSize="10px">
     <mat-grid-tile  *ngFor="let product of products">
       <mat-card >
         <img style="cursor: pointer"  (click)="showDetail(product.id)" mat-card-image [src]="product.thumbnail" alt="Photo of a Shiba Inu">
         <mat-card-footer>
-          <mat-card-title style="margin-bottom: 15px;font-size: 1rem">{{ product.title }}</mat-card-title>
-          <mat-card-title style="font-size: 1.2rem;font-weight: bold">$ {{ product.price }}</mat-card-title>
+          <mat-card-title class="clamp-title" style="margin: 15px;font-size: 1rem">{{ product.title }}</mat-card-title>
+          <mat-card-title style="font-size: 1.2rem;font-weight: bold;margin: 15px">$ {{ product.price }}</mat-card-title>
         </mat-card-footer>
 
       </mat-card>
