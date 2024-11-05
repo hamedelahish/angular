@@ -7,9 +7,11 @@ body {
   margin: 0;
   font-family: Roboto, serif !important;
 }
+
 .mat-body-1, .mat-card-title, .mat-button {
   font-family: 'IRANSans', serif !important;
 }
+
 .full-width {
   width: 100%;
 }
@@ -20,24 +22,32 @@ body {
 
   img {
     vertical-align: middle;
-  aspect-ratio: 5/4;
+    aspect-ratio: 5/4;
     height: 35px;
     object-fit: contain;
     width: auto;
   }
 }
+
 .mat-toolbar {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 10px;
 }
-.spacer{
+
+.spacer {
   flex: 1 1 auto;
 }
+
 .product-list {
   padding: 20px;
 }
 
 mat-card {
   width: 100%;
+
   img {
     vertical-align: middle;
     aspect-ratio: 5/4;
@@ -51,6 +61,7 @@ mat-card {
 mat-card-actions {
   justify-content: center;
 }
+
 mat-card {
   margin: 20px auto;
   max-width: 600px;
@@ -64,7 +75,40 @@ mat-card-actions {
 mat-icon {
   cursor: pointer;
 }
-table{
+
+table {
   width: 100%;
   padding: 1rem;
+}
+
+.search-bar {
+  flex: 1;
+  max-width: 300px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.mat-form-field {
+  width: 100%;
+  height: 40px;
+  margin-top: 0px;
+
+}
+
+.mat-form-field-appearance-outline .mat-form-field-flex {
+  padding: 4px 8px;
+  height: 32px;
+
+}
+
+.mat-form-field-appearance-outline .mat-form-field-infix {
+  padding: 0 0.75em;
+
+}
+
+.mat-input-element {
+
+  height: 24px;
+  line-height: 24px;
+  font-size: 14px;
 }
