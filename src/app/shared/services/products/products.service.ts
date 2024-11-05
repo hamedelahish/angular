@@ -33,5 +33,13 @@ export class ProductsService {
   getUrlWithId(id:number) {
     return `${BASE_URL}/${this.model}/${id}`
   }
+  getUrlSearch(text:string) {
+    return `${BASE_URL}/${this.model}/search?q=${text}`
+
+  }
+
+  searchProducts(text:string) {
+    return this.http.get<{products: IProducts[]}>(this.getUrlSearch(text))
+  }
 }
 

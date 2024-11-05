@@ -3,7 +3,7 @@ import {AuthService} from "../shared/services/auth/auth.service";
 import {Observable, shareReplay} from "rxjs";
 import {selectCartCount} from "../store/cart/cart.selectors";
 import {Store} from "@ngrx/store";
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-dashboard-layout',
@@ -15,11 +15,18 @@ export class DashboardLayoutComponent implements OnInit {
   cartCount$: Observable<number> | undefined;
   searchText: string = '';
 
-  constructor(private authService: AuthService, private store: Store, private router: Router) {
+  constructor(
+    private authService: AuthService,
+    private store: Store,
+    private router: Router,
+
+  ) {
   }
 
   ngOnInit(): void {
     this.cartCount$ = this.store.select(selectCartCount)
+
+
 
   }
 
