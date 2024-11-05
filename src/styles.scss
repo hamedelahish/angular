@@ -5,7 +5,7 @@ html, body {
 
 body {
   margin: 0;
-  font-family: Open Sans, Roboto,serif !important;
+  font-family: Open Sans, Roboto, serif !important;
   background-color: #F6F8FA;;
 }
 
@@ -49,6 +49,7 @@ body {
 mat-card {
   width: 100%;
 
+
   img {
     vertical-align: middle;
     aspect-ratio: 5/4;
@@ -66,6 +67,14 @@ mat-card-actions {
 mat-card {
   margin: 20px auto;
   max-width: 600px;
+}
+
+.product-list mat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 16rem;
+
 }
 
 mat-card-actions {
@@ -118,4 +127,9 @@ table {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.mat-cart-footer {
+  width: 90%;
+
 }
