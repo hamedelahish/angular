@@ -20,6 +20,11 @@ export class AuthService {
       localStorage.setItem('token', userMock.token)
       this.isLoggedIn.next(true);
       this.router.navigate(['/dashboard'])
+      return false
+    }
+    else
+    {
+    return true
     }
     }
 

@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {IUserInfo} from "../shared/interfaces/auth.interface";
-import {userMock} from "../shared/content/content.mock";
 import {AuthService} from "../shared/services/auth/auth.service";
 
 @Component({
@@ -13,6 +12,7 @@ export class LoginComponent implements OnInit {
     username: '',
     password: ''
   }
+  loginError=false
   isLoggedIn$=this.authService.isLoggedIn$
   constructor(private authService:AuthService) {
   }
@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
   }
 
   login(userInfo: IUserInfo) {
-    this.authService.login(userInfo)
+    this.loginError =this.authService.login(userInfo)
+
   }
 }

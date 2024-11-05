@@ -15,7 +15,7 @@
           />
         </mat-form-field>
 
-        <mat-form-field class="full-width">
+        <mat-form-field style="margin-top: 15px;margin-bottom: 15px" class="full-width">
           <input
             matInput
             placeholder="Password"
@@ -25,9 +25,11 @@
           />
         </mat-form-field>
 
+        <span *ngIf="loginError" class="error-message" >Invalid Username Or Password</span>
+
       </mat-card-content>
       <mat-card-actions>
-        <button type="submit" mat-button color="primary">
+        <button type="submit" mat-raised-button color="primary">
           Login
         </button>
       </mat-card-actions>
