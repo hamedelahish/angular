@@ -11,4 +11,6 @@
       </mat-card>
     </mat-grid-tile>
   </mat-grid-list>
+  <mat-paginator style="margin-top: 1rem" [length]="totalProducts" [pageSize]="pageSize" (page)="onPageChange($event)">
+  </mat-paginator>
 </div>

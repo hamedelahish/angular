@@ -13,8 +13,8 @@
   <div class="search-bar">
     <mat-form-field  >
       <mat-label>Search Products</mat-label>
-      <input matInput (keyup)="search($event)" placeholder="Enter product name" (keyup.enter)="search($event)">
-      <button mat-icon-button matSuffix (click)="clearSearch()">
+      <input  #searchInput matInput (keyup)="search($event)" placeholder="Enter product name" (keyup.enter)="search($event)">
+      <button mat-icon-button matSuffix (click)="clearSearch(searchInput)">
         <mat-icon>clear</mat-icon>
       </button>
     </mat-form-field>

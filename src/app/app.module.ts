@@ -20,23 +20,25 @@ import { EffectsModule } from '@ngrx/effects';
 import {cartReducer} from "./store/cart/cart.reducer";
 import {MatBadgeModule} from "@angular/material/badge";
 import { CartComponent } from './cart/cart.component';
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 @NgModule({
 
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MaterialModule,
-    FormsModule,
-    MatToolbarModule,
-    MatIconModule,
-    HttpClientModule,
-    MatDividerModule,
-    StoreModule.forRoot({cart: cartReducer}),
-    EffectsModule.forRoot([]),
-    MatBadgeModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MaterialModule,
+        FormsModule,
+        MatToolbarModule,
+        MatIconModule,
+        HttpClientModule,
+        MatDividerModule,
+        StoreModule.forRoot({cart: cartReducer}),
+        EffectsModule.forRoot([]),
+        MatBadgeModule,
+        MatPaginatorModule
+    ],
 
   declarations: [
     AppComponent,

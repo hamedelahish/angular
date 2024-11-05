@@ -17,8 +17,8 @@ export class ProductsService {
   constructor(private http: HttpClient) {
   }
 
-  getAllProducts() {
-    return this.http.get<{products: IProducts[]}>(this.getUrl())
+  getAllProducts(skip: number, limit: number) {
+    return this.http.get<{products: IProducts[],total:number}>(this.getUrl(skip, limit))
   }
 
   getDetailProduct(id:number) {
@@ -26,20 +26,20 @@ export class ProductsService {
   }
 
 
-  getUrl() {
-    //TODO: موقت جهت عدم دریافت کل اطلاعات ، پجینیشن اضافه خواهد شد
-    return `${BASE_URL}/${this.model}?limit=10`
+  getUrl(skip:number, limit:number) {
+
+    return `${BASE_URL}/${this.model}?skip=${skip}&limit=${limit}`
   }
   getUrlWithId(id:number) {
     return `${BASE_URL}/${this.model}/${id}`
   }
-  getUrlSearch(text:string) {
-    return `${BASE_URL}/${this.model}/search?q=${text}`
+  getUrlSearch(text: string, skip: number, limit: number) {
+    return `${BASE_URL}/${this.model}/search?q=${text}&skip=${skip}&limit=${limit}`
 
   }
 
-  searchProducts(text:string) {
-    return this.http.get<{products: IProducts[]}>(this.getUrlSearch(text))
+  searchProducts(text:string, skip: number, limit: number) {
+    return this.http.get<{products: IProducts[],total:number}>(this.getUrlSearch(text, skip, limit))
   }
 }
 

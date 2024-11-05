@@ -43,8 +43,9 @@ export class DashboardLayoutComponent implements OnInit {
     }
   }
 
-  clearSearch(): void {
+  clearSearch(searchInput: HTMLInputElement): void {
     this.searchText = '';
+    searchInput.value = '';
     this.router.navigate(['/dashboard']);
 
   }
